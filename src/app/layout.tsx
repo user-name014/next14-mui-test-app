@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import Header from "./components/CustomAppBar";
+import CssBaseline from "@mui/material/CssBaseline";
+import React from "react";
 
 export const metadata: Metadata = {
   title: "MUI Next.js TestApp",
@@ -13,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <CssBaseline />
+      <body>
+        <Header />
+
+        {children}
+      </body>
     </html>
   );
 }
