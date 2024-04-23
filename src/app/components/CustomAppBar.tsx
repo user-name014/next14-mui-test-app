@@ -16,7 +16,6 @@ const CustomAppBar = () => {
           <IconButton
             size="large"
             edge="start"
-            color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
@@ -28,7 +27,6 @@ const CustomAppBar = () => {
             <IconButton
               size="large"
               edge="start"
-              color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
             >

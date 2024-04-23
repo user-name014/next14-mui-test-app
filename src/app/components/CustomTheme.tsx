@@ -6,14 +6,26 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import React from "react";
 
 export const CustomTheme = (props: { children: React.ReactNode }) => {
+  // ダークモードかどうかを判定
   const mode = useMediaQuery("(prefers-color-scheme: dark)") ? "dark" : "light";
-  // カスタムシーン
+
+  // テーマを設定
   const theme = createTheme({
-    palette: { mode }, // ここを'light', 'dark'と設定すると一発で変わる
+    palette: {
+      mode: "light",
+      // mode: mode,
+      primary: {
+        main: "#007FFF",
+      },
+      action: {
+        active: "#ffffff",
+      },
+    },
   });
 
   return (
     <ThemeProvider theme={theme}>
+      {/* CSSの初期化 */}
       <CssBaseline />
       {props.children}
     </ThemeProvider>
